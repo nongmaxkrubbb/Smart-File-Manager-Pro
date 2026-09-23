@@ -1,0 +1,286 @@
+"""Thai translations. Keys are the English UI strings; placeholders such as {n} must be kept."""
+
+TH = {
+    "Home": "หน้าหลัก", "File Tools": "จัดการไฟล์", "System": "ระบบ", "Tools": "เครื่องมือ",
+    "Search tools…": "ค้นหาเครื่องมือ…",
+    # --- pages & descriptions
+    "Dashboard": "แดชบอร์ด",
+    "File Organizer": "จัดระเบียบไฟล์",
+    "Disk Analyzer": "วิเคราะห์ดิสก์",
+    "Duplicate Finder": "หาไฟล์ซ้ำ",
+    "File Search": "ค้นหาไฟล์",
+    "Bulk Renamer": "เปลี่ยนชื่อเป็นชุด",
+    "Backup": "สำรองข้อมูล",
+    "Processes": "โปรเซส",
+    "Network Tools": "เครื่องมือเครือข่าย",
+    "System Info": "ข้อมูลระบบ",
+    "Activity Log": "บันทึกกิจกรรม",
+    "Settings": "ตั้งค่า",
+    "Live overview of your PC. Everything runs locally.": "ภาพรวมของเครื่องแบบเรียลไทม์ ทุกอย่างทำงานในเครื่องของคุณ",
+    "Preview files in a folder and sort them by type and/or month. Nothing moves until you confirm.":
+        "ดูตัวอย่างไฟล์ในโฟลเดอร์แล้วจัดตามประเภทและ/หรือเดือน จะไม่มีอะไรถูกย้ายจนกว่าคุณจะยืนยัน",
+    "Find the biggest files and see where the space goes. Read-only: nothing is changed.":
+        "หาไฟล์ใหญ่ที่สุดและดูว่าพื้นที่ไปอยู่ที่ไหน อ่านอย่างเดียว ไม่มีอะไรถูกเปลี่ยน",
+    "Finds identical files (size → partial hash → SHA-256). Checked copies move to a “_Duplicates” folder, or to the Recycle Bin if you choose. The oldest copy is kept.":
+        "หาไฟล์ที่เหมือนกัน (ขนาด → แฮชบางส่วน → SHA-256) สำเนาที่ติ๊กไว้จะถูกย้ายไปโฟลเดอร์ “_Duplicates” หรือส่งเข้าถังขยะถ้าคุณเลือก โดยจะเก็บสำเนาที่เก่าที่สุดไว้",
+    "Search by name (substring) or wildcard such as *.pdf or report_*.xlsx.":
+        "ค้นหาด้วยชื่อ (บางส่วน) หรือ wildcard เช่น *.pdf หรือ report_*.xlsx",
+    "Rename many files at once with a live preview. Conflicts are detected and blocked; the whole batch can be undone.":
+        "เปลี่ยนชื่อหลายไฟล์พร้อมกันพร้อมดูตัวอย่างสด ตรวจจับชื่อซ้ำและบล็อกให้ และย้อนกลับได้ทั้งชุด",
+    "One-way copy of new and changed files. Never deletes anything in the source or the destination.":
+        "คัดลอกทางเดียวเฉพาะไฟล์ใหม่และไฟล์ที่เปลี่ยน ไม่ลบอะไรทั้งที่ต้นทางและปลายทาง",
+    "Read-only view of what is using your CPU and memory (refreshes every 3 s).":
+        "ดูอย่างเดียวว่าโปรแกรมไหนใช้ CPU และหน่วยความจำ (รีเฟรชทุก 3 วินาที)",
+    "Local network details, ping/DNS checks and a single-port TCP check.":
+        "ข้อมูลเครือข่ายในเครื่อง ตรวจ ping/DNS และตรวจพอร์ต TCP ทีละพอร์ต",
+    "Read-only overview of operating system, hardware and storage.": "ภาพรวมระบบปฏิบัติการ ฮาร์ดแวร์ และที่เก็บข้อมูล (อ่านอย่างเดียว)",
+    "Saved between sessions (log entries are kept in English).": "บันทึกไว้ข้ามการเปิดโปรแกรม (ข้อความในบันทึกเป็นภาษาอังกฤษ)",
+    "Appearance and behavior. Changes apply immediately.": "รูปลักษณ์และการทำงาน การเปลี่ยนแปลงมีผลทันที",
+    "Safety-first: every file operation shows a preview first, never deletes (except the optional Recycle Bin button), never overwrites, and can be undone.":
+        "ความปลอดภัยมาก่อน: ทุกการทำงานกับไฟล์แสดงตัวอย่างก่อน ไม่ลบไฟล์ (ยกเว้นปุ่มถังขยะที่เลือกได้) ไม่เขียนทับ และย้อนกลับได้",
+    # --- dashboard
+    "CPU": "CPU", "Memory": "หน่วยความจำ", "Network": "เครือข่าย", "System drive": "ไดรฟ์ระบบ",
+    "Processor usage": "การใช้งานโปรเซสเซอร์", "RAM in use": "RAM ที่ใช้อยู่", "Current transfer": "การรับส่งปัจจุบัน",
+    "System overview": "ภาพรวมระบบ", "Quick actions": "ทางลัด", "Recent activity": "กิจกรรมล่าสุด",
+    "Organize Downloads": "จัดโฟลเดอร์ดาวน์โหลด", "Analyze Disk": "วิเคราะห์ดิสก์", "Find Duplicates": "หาไฟล์ซ้ำ",
+    "Search Files": "ค้นหาไฟล์", "Back Up a Folder": "สำรองโฟลเดอร์", "No activity yet.": "ยังไม่มีกิจกรรม",
+    "{n} logical core(s)": "{n} คอร์แบบลอจิคัล", "used": "ใช้ไป", "{free} free of {total}": "ว่าง {free} จาก {total}",
+    "OS": "ระบบปฏิบัติการ", "Uptime: {v}": "เปิดเครื่องมาแล้ว: {v}", "Running processes: {v}": "โปรเซสที่ทำงาน: {v}", "Local IP: {v}": "IP ในเครื่อง: {v}",
+    "Host: {v}": "ชื่อเครื่อง: {v}", "OS: {v}": "ระบบปฏิบัติการ: {v}", "Battery: {v}": "แบตเตอรี่: {v}", " (charging)": " (กำลังชาร์จ)",
+    "Ctrl+K  quick switch": "Ctrl+K  สลับหน้าเร็ว", "Go to page…": "ไปที่หน้า…",
+    # --- common buttons / labels
+    "Browse…": "เลือก…", "Cancel": "ยกเลิก", "Cancelled. ": "ยกเลิกแล้ว ", "Cancelled.": "ยกเลิกแล้ว", "Save": "บันทึก",
+    "Select all": "เลือกทั้งหมด", "Select none": "ไม่เลือกเลย", "↶ Undo last": "↶ ย้อนกลับล่าสุด", "Clear": "ล้าง",
+    "Refresh": "รีเฟรช", "Reset": "รีเซ็ต", "Export CSV…": "ส่งออก CSV…", "Export CSV": "ส่งออก CSV", "Open location": "เปิดตำแหน่งไฟล์",
+    "Scanning…": "กำลังสแกน…", "Searching…": "กำลังค้นหา…", "Comparing…": "กำลังเปรียบเทียบ…", "Working…": "กำลังทำงาน…",
+    "Error: {msg}": "ข้อผิดพลาด: {msg}", "Choose folder": "เลือกโฟลเดอร์", "Choose files": "เลือกไฟล์",
+    "Invalid folder": "โฟลเดอร์ไม่ถูกต้อง", "Choose an existing folder first.": "กรุณาเลือกโฟลเดอร์ที่มีอยู่จริงก่อน",
+    "Protected folder": "โฟลเดอร์ที่ถูกป้องกัน",
+    "This action is blocked for {reason}.\nChoose a normal user folder instead.": "การดำเนินการนี้ถูกบล็อกสำหรับ {reason}\nกรุณาเลือกโฟลเดอร์ผู้ใช้ทั่วไปแทน",
+    "Another file operation is still running": "ยังมีการทำงานกับไฟล์อีกงานที่กำลังทำอยู่",
+    " · {n} unreadable skipped": " · ข้ามไฟล์ที่อ่านไม่ได้ {n} รายการ", " · {n} errors": " · ผิดพลาด {n} รายการ",
+    "Nothing to do": "ไม่มีอะไรให้ทำ", "Nothing to undo": "ไม่มีอะไรให้ย้อนกลับ", "Nothing to export yet": "ยังไม่มีข้อมูลให้ส่งออก",
+    "Exported {n} rows": "ส่งออก {n} แถวแล้ว", "Export failed": "ส่งออกไม่สำเร็จ", "File not found": "ไม่พบไฟล์",
+    "Open file": "เปิดไฟล์", "Show in folder": "แสดงในโฟลเดอร์", "Copy path": "คัดลอกพาธ", "Path copied": "คัดลอกพาธแล้ว",
+    "Not opening programs/scripts from here. Use “Show in folder”.": "ไม่เปิดโปรแกรม/สคริปต์จากที่นี่ ใช้ “แสดงในโฟลเดอร์” แทน",
+    "{label}: {n} files": "{label}: {n} ไฟล์", "Undo": "ย้อนกลับ", "Undo “{label}”?\n{n} files will be moved back.": "ย้อนกลับ “{label}”?\nจะย้ายไฟล์ {n} ไฟล์กลับ",
+    "Restored {n} files": "กู้คืน {n} ไฟล์แล้ว",
+    # --- organizer
+    "Rules…": "กฎ…", "Scan folder": "สแกนโฟลเดอร์", "File": "ไฟล์", "Type": "ประเภท", "Size": "ขนาด", "Proposed destination": "ปลายทางที่เสนอ",
+    "Auto-organize this folder when new files arrive": "จัดโฟลเดอร์นี้อัตโนมัติเมื่อมีไฟล์ใหม่เข้ามา",
+    "Scan a folder to preview the proposed changes. Tip: drag a folder onto the path box.": "สแกนโฟลเดอร์เพื่อดูตัวอย่าง เคล็ดลับ: ลากโฟลเดอร์มาวางที่ช่องพาธได้",
+    "Confirm and organize": "ยืนยันและจัดระเบียบ",
+    "Found {n} files. Untick any you want to leave alone, then confirm.": "พบ {n} ไฟล์ เอาเครื่องหมายถูกออกจากไฟล์ที่ไม่ต้องการย้าย แล้วกดยืนยัน",
+    "Scan a folder and tick at least one file first.": "กรุณาสแกนโฟลเดอร์และติ๊กอย่างน้อยหนึ่งไฟล์ก่อน",
+    "Confirm organization": "ยืนยันการจัดระเบียบ",
+    "Move {n} files?\nExisting files are never overwritten (a number is added to the name).\nYou can undo afterwards.":
+        "ย้าย {n} ไฟล์?\nจะไม่เขียนทับไฟล์ที่มีอยู่ (จะเติมเลขต่อท้ายชื่อ)\nย้อนกลับได้ภายหลัง",
+    "Cannot read folder": "อ่านโฟลเดอร์ไม่ได้", "Custom rules": "กฎที่กำหนดเอง", "Pattern": "รูปแบบ", "Folder": "โฟลเดอร์",
+    "Add rule": "เพิ่มกฎ", "Remove selected": "ลบที่เลือก", "{n} rules saved": "บันทึกกฎแล้ว {n} ข้อ",
+    "Files whose name matches a pattern go to that folder. Use wildcards (*.psd, report_*) or part of a name. The first matching rule wins; other files use the built-in categories.":
+        "ไฟล์ที่ชื่อตรงกับรูปแบบจะถูกย้ายไปโฟลเดอร์นั้น ใช้ wildcard (*.psd, report_*) หรือส่วนหนึ่งของชื่อ กฎข้อแรกที่ตรงจะถูกใช้ ไฟล์อื่นใช้หมวดมาตรฐาน",
+    "Auto-organize": "จัดอัตโนมัติ",
+    "New files that finish downloading in\n{folder}\nwill be moved automatically using your current mode and rules.\nEvery batch can be undone. Enable?":
+        "ไฟล์ใหม่ที่ดาวน์โหลดเสร็จใน\n{folder}\nจะถูกย้ายอัตโนมัติตามโหมดและกฎปัจจุบันของคุณ\nย้อนกลับได้ทุกชุด เปิดใช้งานไหม?",
+    "Watching: {folder}": "กำลังเฝ้าดู: {folder}", "Auto-organized {n} files": "จัดอัตโนมัติ {n} ไฟล์",
+    "Show window": "แสดงหน้าต่าง", "Organize watched folder now": "จัดโฟลเดอร์ที่เฝ้าดูตอนนี้", "Quit": "ออก",
+    "Still running in the tray to auto-organize. Right-click the tray icon to quit.": "ยังทำงานอยู่ใน tray เพื่อจัดไฟล์อัตโนมัติ คลิกขวาที่ไอคอนเพื่อออก",
+    "By type": "ตามประเภท", "By type + month": "ตามประเภท + เดือน", "By month": "ตามเดือน",
+    "Images": "รูปภาพ", "Documents": "เอกสาร", "Archives": "ไฟล์บีบอัด", "Installers": "ตัวติดตั้ง", "Audio": "เสียง",
+    "Videos": "วิดีโอ", "Code": "โค้ด", "Others": "อื่น ๆ", "(files in folder)": "(ไฟล์ในโฟลเดอร์)",
+    "Organize Downloads folder": "จัดโฟลเดอร์ดาวน์โหลด",
+    # --- disk
+    "Analyze": "วิเคราะห์", "Largest files": "ไฟล์ที่ใหญ่ที่สุด", "Last modified": "แก้ไขล่าสุด", "Space by type": "พื้นที่แยกตามประเภท",
+    "Biggest folders": "โฟลเดอร์ที่ใหญ่ที่สุด", "Run an analysis": "กดวิเคราะห์เพื่อดูผล",
+    "Double-click a row to open its folder. Click a column header to sort.": "ดับเบิลคลิกแถวเพื่อเปิดโฟลเดอร์ คลิกหัวคอลัมน์เพื่อเรียงลำดับ",
+    "{n} files · {total} total. No files were changed.": "{n} ไฟล์ · รวม {total} ไม่มีไฟล์ใดถูกเปลี่ยนแปลง",
+    # --- similar photos / cleanup / crash (v4)
+    "Similar Photos": "รูปที่คล้ายกัน", "Cleanup": "ล้างไฟล์ขยะ",
+    "Finds photos that look alike (burst shots, resized or re-saved copies) using a perceptual hash. The copy with the most pixels is kept; thumbnails help you decide.":
+        "หารูปที่หน้าตาคล้ายกัน (ถ่ายรัว ย่อขนาด หรือบันทึกซ้ำ) ด้วย perceptual hash จะเก็บสำเนาที่มีจำนวนพิกเซลมากที่สุดไว้ และมีภาพย่อช่วยตัดสินใจ",
+    "Finds temporary files, large files you have not used for a long time, and empty folders. Nothing is touched until you send the checked items to the Recycle Bin.":
+        "หาไฟล์ชั่วคราว ไฟล์ใหญ่ที่ไม่ได้ใช้นาน และโฟลเดอร์ว่าง จะไม่แตะต้องอะไรจนกว่าคุณจะส่งรายการที่ติ๊กไว้เข้าถังขยะ",
+    "Strict": "เข้มงวด", "Normal": "ปกติ", "Loose": "หลวม", "Find similar photos": "หารูปที่คล้ายกัน",
+    "Choose a folder of photos and scan.": "เลือกโฟลเดอร์รูปภาพแล้วสแกน", "Photo": "รูปภาพ", "Resolution": "ความละเอียด",
+    "Move checked to _Similar": "ย้ายที่ติ๊กไป _Similar", "Move similar photos": "ย้ายรูปที่คล้ายกัน",
+    "Scan for clutter": "สแกนหาไฟล์ขยะ", " days unused": " วันที่ไม่ได้ใช้", "Item": "รายการ", "Kind": "ชนิด", "Last used": "ใช้ล่าสุด",
+    "Large unused files are never pre-ticked; temp files and empty folders are.": "ไฟล์ใหญ่ที่ไม่ได้ใช้จะไม่ถูกติ๊กไว้ให้ ส่วนไฟล์ชั่วคราวและโฟลเดอร์ว่างจะถูกติ๊กไว้",
+    "Send checked to Recycle Bin…": "ส่งที่ติ๊กเข้าถังขยะ…", "Temporary file": "ไฟล์ชั่วคราว", "Large and unused": "ใหญ่และไม่ได้ใช้", "Empty folder": "โฟลเดอร์ว่าง",
+    "{n} items · {size} in total · {files} files scanned": "{n} รายการ · รวม {size} · สแกน {files} ไฟล์",
+    "Photos by date taken": "รูปภาพตามวันที่ถ่าย",
+    "Unexpected error": "เกิดข้อผิดพลาดที่ไม่คาดคิด",
+    "Something went wrong: {e}\n\nA report was saved to:\n{path}\nPlease send that file if you report this problem.":
+        "เกิดข้อผิดพลาด: {e}\n\nบันทึกรายงานไว้ที่:\n{path}\nหากแจ้งปัญหา กรุณาส่งไฟล์นี้มาด้วย",
+    # --- duplicates
+    "Find duplicates": "หาไฟล์ซ้ำ", "Modified": "แก้ไขเมื่อ", "Group": "กลุ่ม", " KB min": " KB ขั้นต่ำ", " MB min": " MB ขั้นต่ำ",
+    "Choose a folder and scan.": "เลือกโฟลเดอร์แล้วสแกน", "Recycle checked…": "ส่งที่ติ๊กเข้าถังขยะ…", "Move checked to _Duplicates": "ย้ายที่ติ๊กไป _Duplicates",
+    "  ✓ keep": "  ✓ เก็บไว้", "{g} groups · {w} reclaimable · {n} files scanned": "{g} กลุ่ม · คืนพื้นที่ได้ {w} · สแกน {n} ไฟล์",
+    "Scan and tick at least one file first.": "กรุณาสแกนและติ๊กอย่างน้อยหนึ่งไฟล์ก่อน", "Confirm move": "ยืนยันการย้าย",
+    "Move {n} duplicate files to:\n{dest}\n\nNothing is deleted.": "ย้ายไฟล์ซ้ำ {n} ไฟล์ไปที่:\n{dest}\n\nไม่มีการลบไฟล์",
+    "Done. Scan again to refresh.": "เสร็จแล้ว สแกนอีกครั้งเพื่อรีเฟรช", "Move duplicates": "ย้ายไฟล์ซ้ำ",
+    "Send to Recycle Bin": "ส่งเข้าถังขยะ",
+    "Send {n} files ({size}) to the Recycle Bin?\nYou can restore them from the Recycle Bin, but this app cannot undo it.":
+        "ส่ง {n} ไฟล์ ({size}) เข้าถังขยะ?\nคุณกู้คืนได้จากถังขยะ แต่แอปนี้ย้อนกลับให้ไม่ได้",
+    "Recycled {n} files": "ส่งเข้าถังขยะ {n} ไฟล์แล้ว",
+    # --- search
+    "Search": "ค้นหา", "e.g. invoice   or   *.pdf": "เช่น invoice   หรือ   *.pdf",
+    "Double-click a result to open its folder. Right-click for more.": "ดับเบิลคลิกผลลัพธ์เพื่อเปิดโฟลเดอร์ คลิกขวาเพื่อดูเมนูเพิ่ม",
+    "{n} results": "{n} ผลลัพธ์", " (showing the first 2000)": " (แสดง 2000 รายการแรก)", " · {n} files checked": " · ตรวจ {n} ไฟล์",
+    # --- renamer
+    "Add files…": "เพิ่มไฟล์…", "Add folder…": "เพิ่มโฟลเดอร์…", "Find": "ค้นหา", "Replace with": "แทนที่ด้วย", "Prefix": "คำนำหน้า", "Suffix": "คำต่อท้าย",
+    "Case:": "ตัวพิมพ์:", "Spaces:": "ช่องว่าง:", "Keep": "คงเดิม", "lowercase": "ตัวพิมพ์เล็ก", "UPPERCASE": "ตัวพิมพ์ใหญ่", "Title Case": "ขึ้นต้นคำด้วยตัวใหญ่",
+    "Underscore": "ขีดล่าง (_)", "Dash": "ขีดกลาง (-)", "Remove": "ลบออก", "Add number": "ใส่เลขลำดับ", "digits: ": "หลัก: ",
+    "Current name": "ชื่อปัจจุบัน", "New name": "ชื่อใหม่", "Status": "สถานะ", "Add files or a folder to begin.": "เพิ่มไฟล์หรือโฟลเดอร์เพื่อเริ่มต้น",
+    "Apply rename": "ใช้การเปลี่ยนชื่อ", "No files would change.": "ไม่มีไฟล์ที่จะเปลี่ยน", "Confirm rename": "ยืนยันการเปลี่ยนชื่อ",
+    "Rename {n} files? Blocked files are skipped. You can undo afterwards.": "เปลี่ยนชื่อ {n} ไฟล์? ไฟล์ที่ถูกบล็อกจะถูกข้าม ย้อนกลับได้ภายหลัง",
+    "Renamed {n} files": "เปลี่ยนชื่อ {n} ไฟล์แล้ว", "Bulk rename": "เปลี่ยนชื่อเป็นชุด",
+    "{n} files · {ok} will be renamed": "{n} ไฟล์ · จะเปลี่ยนชื่อ {ok} ไฟล์", " · {bad} blocked": " · ถูกบล็อก {bad}",
+    "OK": "ตกลง", "Unchanged": "ไม่เปลี่ยน", "Conflict": "ชื่อชนกัน", "Invalid": "ไม่ถูกต้อง", "Protected": "ถูกป้องกัน",
+    # --- backup
+    "Source": "ต้นทาง", "Destination": "ปลายทาง", "Preview changes": "ดูตัวอย่างการเปลี่ยนแปลง", "Start backup": "เริ่มสำรอง",
+    "File to copy": "ไฟล์ที่จะคัดลอก", "Reason": "เหตุผล", "Choose source and destination, then preview.": "เลือกต้นทางและปลายทาง แล้วดูตัวอย่าง",
+    "new": "ใหม่", "changed": "เปลี่ยนแปลง", " (showing first 3000)": " (แสดง 3000 รายการแรก)",
+    "{n} files to copy · {size}": "{n} ไฟล์ที่จะคัดลอก · {size}", " · {n} files compared": " · เปรียบเทียบ {n} ไฟล์",
+    "Destination is already up to date ({n} files compared).": "ปลายทางเป็นปัจจุบันแล้ว (เปรียบเทียบ {n} ไฟล์)",
+    "Copy {n} files to:\n{dst}\n\nNothing will be deleted. Older copies of changed files are replaced.":
+        "คัดลอก {n} ไฟล์ไปที่:\n{dst}\n\nไม่มีการลบอะไร สำเนาเก่าของไฟล์ที่เปลี่ยนจะถูกแทนที่",
+    "Copied {n} files ({size}) · {e} errors": "คัดลอก {n} ไฟล์ ({size}) · ผิดพลาด {e}", "Backup finished: {n} files": "สำรองเสร็จ: {n} ไฟล์",
+    # --- processes
+    "Filter by name…": "กรองตามชื่อ…", "Sort: Memory": "เรียง: หน่วยความจำ", "Sort: CPU": "เรียง: CPU", "Sort: Name": "เรียง: ชื่อ",
+    "Name": "ชื่อ", "PID": "PID", "CPU %": "CPU %", "{n} processes (showing top 80)": "{n} โปรเซส (แสดง 80 อันดับแรก)",
+    # --- network
+    "Local network information": "ข้อมูลเครือข่ายในเครื่อง", "Diagnostics": "การวินิจฉัย", "Hostname or IP": "ชื่อโฮสต์หรือ IP", "port ": "พอร์ต ",
+    "Ping + DNS": "Ping + DNS", "Check port": "ตรวจพอร์ต", "Computer name: {v}": "ชื่อเครื่อง: {v}", "Primary local IP: {v}": "IP หลักในเครื่อง: {v}",
+    "up": "ทำงาน", "down": "ไม่ทำงาน", "Could not read network info: {e}": "อ่านข้อมูลเครือข่ายไม่ได้: {e}",
+    "Invalid host": "โฮสต์ไม่ถูกต้อง", "Enter a valid hostname or IP address.": "กรุณาใส่ชื่อโฮสต์หรือ IP ที่ถูกต้อง",
+    # --- system / log / settings
+    "Copy report": "คัดลอกรายงาน", "Copied to clipboard": "คัดลอกไปคลิปบอร์ดแล้ว", "Version": "เวอร์ชัน", "Architecture": "สถาปัตยกรรม",
+    "Processor": "โปรเซสเซอร์", "CPU cores": "คอร์ CPU", "physical": "ฟิสิคัล", "logical": "ลอจิคัล", "total": "ทั้งหมด", "available": "ว่าง",
+    "Boot time": "เวลาเปิดเครื่อง", "Uptime": "เวลาที่เปิดเครื่อง", "Not reported": "ไม่ระบุ", "Disk partitions:": "พาร์ทิชันดิสก์:",
+    "{free} free / {total} total ({pct}% used)": "ว่าง {free} / ทั้งหมด {total} (ใช้ {pct}%)", "access unavailable": "เข้าถึงไม่ได้",
+    "Unable to read system information: {e}": "อ่านข้อมูลระบบไม่ได้: {e}",
+    "Filter the log…": "กรองบันทึก…",
+    "Database: {actions} actions · {files} files moved · {scans} scans · {hashes} cached hashes":
+        "ฐานข้อมูล: {actions} การกระทำ · ย้าย {files} ไฟล์ · สแกน {scans} ครั้ง · แคช hash {hashes} รายการ",
+    "Clear log": "ล้างบันทึก", "Export log…": "ส่งออกบันทึก…", "Delete the saved activity log?": "ลบบันทึกกิจกรรมที่บันทึกไว้?", "Log exported": "ส่งออกบันทึกแล้ว",
+    "Appearance": "รูปลักษณ์", "Theme": "ธีม", "Font": "ฟอนต์", "Font size": "ขนาดตัวอักษร", "Reset font": "รีเซ็ตฟอนต์", "Language": "ภาษา", "Restart now": "รีสตาร์ทตอนนี้", "Dashboard refresh": "รีเฟรชแดชบอร์ด",
+    "Data": "ข้อมูล", "Open data folder": "เปิดโฟลเดอร์ข้อมูล", "Reset saved paths and settings": "รีเซ็ตพาธและการตั้งค่าที่บันทึกไว้",
+    "About": "เกี่ยวกับ", "Restart the app to apply the language": "รีสตาร์ทแอปเพื่อใช้ภาษาใหม่",
+    "Forget saved folders and settings? (Theme and language reset on next launch.)": "ลืมโฟลเดอร์และการตั้งค่าที่บันทึกไว้? (ธีมและภาษาจะรีเซ็ตเมื่อเปิดครั้งหน้า)",
+    "Settings reset": "รีเซ็ตการตั้งค่าแล้ว",
+    "Local-first. No telemetry, no network calls except the ones you run in Network Tools.\nShortcuts: Ctrl+K quick switch · Ctrl+1…9 jump to page.":
+        "ทำงานในเครื่องเป็นหลัก ไม่ส่งข้อมูลใด ๆ และไม่เชื่อมต่อเครือข่ายนอกจากที่คุณสั่งใน เครื่องมือเครือข่าย\nคีย์ลัด: Ctrl+K สลับหน้าเร็ว · Ctrl+1…9 ข้ามไปหน้า",
+}
+
+# Progress text produced by core.py (English) -> Thai
+PATTERNS = [
+    (r"^Scanning… (\d+) files$", r"กำลังสแกน… {\1} ไฟล์"),
+]
+PATTERNS = [
+    (r"^Scanning… (\d+) files$", r"กำลังสแกน… \1 ไฟล์"),
+    (r"^Indexing files… (\d+)$", r"กำลังจัดทำดัชนีไฟล์… \1"),
+    (r"^Comparing candidates (\d+)/(\d+)…$", r"กำลังเปรียบเทียบ \1/\2…"),
+    (r"^Searching… (\d+) files checked, (\d+) found$", r"กำลังค้นหา… ตรวจแล้ว \1 ไฟล์ พบ \2"),
+    (r"^Comparing… (\d+) files$", r"กำลังเปรียบเทียบ… \1 ไฟล์"),
+    (r"^Copying (\d+)/(\d+)…$", r"กำลังคัดลอก \1/\2…"),
+    (r"^Moving (\d+)/(\d+)…$", r"กำลังย้าย \1/\2…"),
+    (r"^Restoring (\d+)/(\d+)…$", r"กำลังกู้คืน \1/\2…"),
+    (r"^Renaming (\d+)/(\d+)…$", r"กำลังเปลี่ยนชื่อ \1/\2…"),
+    (r"^Recycling (\d+)/(\d+)…$", r"กำลังส่งเข้าถังขยะ \1/\2…"),
+    (r"^Organize (.+)$", r"จัดระเบียบ \1"),
+]
+
+# ---- UI redesign (slim icon rail, cards). Later entries override older wording to match the design.
+TH.update({
+    # dashboard
+    "Search tools or files… (Ctrl+K)": "ค้นหาเครื่องมือหรือไฟล์... (Ctrl+K)",
+    "All your data stays on this PC": "ข้อมูลทั้งหมดอยู่ในเครื่องคุณ",
+    "Good morning — here's how your PC is doing": "สวัสดีตอนเช้า มาดูกันว่าเครื่องคุณเป็นอย่างไร",
+    "Good afternoon — here's how your PC is doing": "สวัสดีตอนบ่าย มาดูกันว่าเครื่องคุณเป็นอย่างไร",
+    "Good evening — here's how your PC is doing": "สวัสดีตอนเย็น มาดูกันว่าเครื่องคุณเป็นอย่างไร",
+    "File tidiness": "ความเป็นระเบียบของไฟล์",
+    "Excellent: your files are in great shape": "เยี่ยม ไฟล์ของคุณเป็นระเบียบดีมาก",
+    "Good, but a little more to clear": "ดี แต่ยังเคลียร์ได้อีกเล็กน้อย",
+    "Fair: worth a quick tidy-up": "พอใช้ ควรจัดการสักหน่อย",
+    "Cluttered: start with the tips on the right": "ค่อนข้างรก เริ่มจากคำแนะนำด้านขวา",
+    "Suggested for you now": "แนะนำให้ทำตอนนี้",
+    "Downloads folder is cluttered": "โฟลเดอร์ดาวน์โหลดรก",
+    "“{name}” folder is cluttered": "โฟลเดอร์ “{name}” รก",
+    "{n} loose files of {k} kinds. They can be sorted automatically": "ไฟล์ปะปนกัน {n} ไฟล์ {k} ชนิด จัดแยกให้อัตโนมัติได้",
+    "Organize": "จัดระเบียบ",
+    "Duplicate files found": "พบไฟล์ซ้ำ",
+    "{n} extra copies ({size}). Copies move to _Duplicates, nothing is deleted": "ย้ายตัวสำเนา {n} ไฟล์ ({size}) ไป _Duplicates ไม่ลบทิ้ง",
+    "View duplicates": "ดูไฟล์ซ้ำ",
+    "Temporary files piling up": "ไฟล์ชั่วคราวสะสม",
+    "{size} can go to the Recycle Bin, recoverable": "{size} ส่งไปถังขยะ กู้คืนได้",
+    "Clean up": "ล้างไฟล์ขยะ",
+    "Nothing to do right now": "ตอนนี้ยังไม่มีอะไรต้องทำ",
+    "Your files look tidy.": "ไฟล์ของคุณดูเป็นระเบียบดี",
+    "Checking your files…": "กำลังตรวจไฟล์ของคุณ…",
+    "This only reads names and sizes.": "ตรวจแค่ชื่อและขนาดไฟล์ ไม่แตะต้องอะไร",
+    "Choose a folder in File Organizer to get tips.": "เลือกโฟลเดอร์ในหน้าจัดระเบียบไฟล์เพื่อรับคำแนะนำ",
+    "No folder to check yet": "ยังไม่มีโฟลเดอร์ให้ตรวจ",
+    "Pick one in File Organizer and come back.": "เลือกในหน้าจัดระเบียบไฟล์ แล้วกลับมาดู",
+    "(quick check, big folder)": "(ตรวจแบบเร็ว โฟลเดอร์ใหญ่)",
+    "Free space": "พื้นที่ว่าง", "Free space ({drive})": "พื้นที่ว่าง ({drive})",
+    "Latest undoable": "ย้อนกลับได้ล่าสุด", "{n} items": "{n} รายการ",
+    "More tools": "เครื่องมืออื่น ๆ", "Search files for “{q}”": "ค้นหาไฟล์ “{q}”",
+    # organizer
+    "Preview before every change. Existing files are never overwritten.": "ดูตัวอย่างก่อนทุกครั้ง ไม่เขียนทับไฟล์เดิม",
+    "Choose folder…": "เลือกโฟลเดอร์...", "Choose…": "เลือก...",
+    "By file type": "ตามชนิดไฟล์", "Type + month": "ชนิด + เดือน", "By month": "ตามเดือน",
+    "Photos by date taken": "รูปตามวันที่ถ่าย", "My rules…": "กฎของฉัน...",
+    "Folders that will be created": "จะแยกเป็นโฟลเดอร์", "Sample of files to move": "ตัวอย่างไฟล์ที่จะย้าย",
+    "Nothing to organize here.": "ไม่มีไฟล์ให้จัดในโฟลเดอร์นี้",
+    "{n} files": "{n} ไฟล์",
+    "Partly downloaded files, hidden files and symlinks are always skipped.": "ไฟล์ที่ยังโหลดไม่เสร็จ ไฟล์ซ่อน และ symlink จะถูกข้ามเสมอ",
+    "Auto-organize (watch folder)": "จัดอัตโนมัติ (เฝ้าโฟลเดอร์)",
+    "Undo last": "ย้อนกลับล่าสุด", "↩ Undo last": "↩ ย้อนกลับล่าสุด",
+    "Organize {n} files": "จัดระเบียบ {n} ไฟล์",
+    "Choose an existing folder to preview.": "เลือกโฟลเดอร์ที่มีอยู่จริงเพื่อดูตัวอย่าง",
+    "This folder is protected. Choose a normal user folder.": "โฟลเดอร์นี้ถูกป้องกัน เลือกโฟลเดอร์ผู้ใช้ทั่วไปแทน",
+    "Pick a folder with files in it and keep at least one file ticked.": "เลือกโฟลเดอร์ที่มีไฟล์ และติ๊กอย่างน้อยหนึ่งไฟล์ก่อน",
+    "Images": "รูปภาพ", "Documents": "เอกสาร", "Videos": "วิดีโอ", "Audio": "เพลง", "Archives": "ไฟล์บีบอัด",
+    "Installers": "โปรแกรม", "Code": "โค้ด",
+    # disk
+    "See what takes the most space. Read-only: nothing is touched.": "ดูว่าอะไรกินพื้นที่มากที่สุด อ่านอย่างเดียว ไม่แตะไฟล์",
+    "Total scanned": "ทั้งหมดที่สแกน", "Files": "ไฟล์", "Skipped (unreadable)": "ข้ามเพราะอ่านไม่ได้",
+    "Space by type": "พื้นที่ตามชนิด", "Show 100 largest files": "แสดง 100 ไฟล์ใหญ่สุด",
+    "Cancelled. Show 100 largest files": "ยกเลิกแล้ว แสดง 100 ไฟล์ใหญ่สุด", "Close": "ปิด",
+    # duplicates
+    "Compares size, then verifies with SHA-256. The oldest copy is kept; the rest move to a separate folder.":
+        "เทียบขนาด แล้วตรวจด้วย SHA-256 เก็บไฟล์เก่าสุดไว้ ที่เหลือย้ายไปโฟลเดอร์แยก",
+    "Scan": "สแกน", "Duplicate groups": "กลุ่มที่ซ้ำ", "Files to move": "ไฟล์ที่จะย้าย", "Space to reclaim": "พื้นที่ที่คืนได้",
+    "Action": "การจัดการ", "Group {n} · {name}": "กลุ่ม {n} · {name}", "Keep (oldest)": "เก็บไว้ (เก่าสุด)",
+    "Will move": "จะย้าย", "Kept": "เก็บไว้",
+    "Moving to the _Duplicates folder can be undone.": "ย้ายไปโฟลเดอร์ _Duplicates ย้อนกลับได้",
+    "Send to Recycle Bin…": "ส่งไปถังขยะ...", "Move to _Duplicates": "ย้ายไป _Duplicates",
+    "Options…": "ตัวเลือก...", "Ignore files smaller than": "ข้ามไฟล์ที่เล็กกว่า",
+    # cleanup
+    "Finds files you can remove. They go to the Recycle Bin, never deleted for good.": "หาไฟล์ที่ลบได้ ส่งไปถังขยะ ไม่ลบถาวร",
+    "Folder to scan": "โฟลเดอร์ที่จะสแกน", "Large files: at least": "ไฟล์ใหญ่: ขนาดอย่างน้อย",
+    "Large files: not opened for": "ไฟล์ใหญ่: ไม่ได้เปิดมานาน",
+    "Temporary files": "ไฟล์ชั่วคราว", "Large files not opened lately": "ไฟล์ใหญ่ที่ไม่ได้เปิดนาน",
+    "Left unticked, you choose": "ไม่ติ๊กไว้ให้ ต้องเลือกเอง", "Empty folders": "โฟลเดอร์ว่าง",
+    "Not opened for {n} days": "ไม่ได้เปิด {n} วัน", "No files inside": "ไม่มีไฟล์ข้างใน", "Nothing found": "ไม่พบ",
+    "Everything goes to the Recycle Bin and can be restored from there (not undoable in this app).":
+        "ทุกอย่างไปที่ถังขยะ กู้คืนได้จากถังขยะของ Windows (ย้อนกลับในแอปไม่ได้)",
+    "Rescan": "สแกนใหม่", "Send to Recycle Bin": "ส่งไปถังขยะ", "Send to Recycle Bin {size}": "ส่งไปถังขยะ {size}",
+    # renamer
+    "Rename many files at once. Live preview, duplicate-name check, and the whole batch can be undone.":
+        "เปลี่ยนชื่อหลายไฟล์พร้อมกัน ดูตัวอย่างสด ตรวจชื่อซ้ำให้ และย้อนกลับได้ทั้งชุด",
+    "Add files…": "เพิ่มไฟล์...", "Add folder…": "เพิ่มโฟลเดอร์...",
+    "Optional": "ไม่ใส่ก็ได้", "Case": "ตัวพิมพ์", "Spaces": "ช่องว่าง", "Add number": "ใส่เลขลำดับ",
+    "Start at / digits": "เริ่มที่ / หลัก",
+    "{n} files · nothing changes until you confirm": "{n} ไฟล์·ยังไม่มีอะไรเปลี่ยนจนกว่าจะกดยืนยัน",
+    "✓ Ready": "✓ พร้อม", "⚠ Name conflict": "⚠ ชื่อซ้ำ", "⚠ Invalid name": "⚠ ชื่อไม่ถูกต้อง", "⚠ Protected": "⚠ ถูกป้องกัน",
+    "Apply rename": "ใช้การเปลี่ยนชื่อ",
+    # settings
+    "Theme, language, font and refresh rate": "ธีม ภาษา ฟอนต์ และการรีเฟรช",
+    "Refresh": "การรีเฟรช", "You need to restart after changing this.": "เปลี่ยนแล้วต้องเปิดโปรแกรมใหม่",
+    "Font name": "ชื่อฟอนต์", "Live stats update rate": "ความถี่ของกราฟเครื่อง",
+    "Every 1 second": "ทุก 1 วินาที", "Every {n} seconds": "ทุก {n} วินาที",
+    "Saved automatically": "บันทึกให้อัตโนมัติ", "Reset to defaults": "คืนค่าเริ่มต้น",
+    "Steam": "Steam", "Neon Violet": "ม่วงนีออน", "Cyber Cyan": "ไซเบอร์ฟ้า", "Crimson Night": "แดงค่ำ", "Light": "สว่าง",
+    "Forget saved folders and settings? (The language resets on next launch.)": "ลืมโฟลเดอร์และการตั้งค่าที่บันทึกไว้? (ภาษาจะรีเซ็ตเมื่อเปิดครั้งหน้า)",
+})
