@@ -1,71 +1,71 @@
-# Smart File Manager Pro  v4.2
+# Smart File Manager Pro v4.2
 
-A local-first desktop toolkit for Windows 10/11 (Linux/macOS also work), built with Python + PySide6.
-No telemetry. No network calls except the ones you trigger in *Network Tools*.
-**UI languages: English and ไทย** (Settings → Language, then restart).
+ชุดเครื่องมือเดสก์ท็อปแบบ local-first สำหรับ Windows 10/11 (ใช้งานบน Linux/macOS ได้เช่นกัน) สร้างด้วย Python + PySide6
+ไม่มี telemetry และไม่มีการเรียกเครือข่าย ยกเว้นที่คุณสั่งเองใน *Network Tools*
+**ภาษา UI: English และ ไทย** (Settings → Language แล้วรีสตาร์ต)
 
-## What's new in 4.3
-- **SQLite storage** (`db.py`, file `~/.smart_file_manager_pro/sfm.db`, standard-library `sqlite3`, no new dependency). It replaces the JSON undo journal, the text activity log and the rules saved in QSettings:
-  - `undo_batches` + `undo_moves` (1-to-many, `ON DELETE CASCADE`): undo history survives restarts; undone actions are kept as history (`status`).
-  - `activity_log`: searchable (new filter box on the Activity Log page) and trimmed automatically.
-  - `rules`: ordered custom organizer rules.
-  - `hash_cache`: the Duplicate Finder reuses SHA-256 values while a file's size + modified time are unchanged, so repeat scans are much faster.
-  - `scan_history`: every duplicate scan (files, groups, wasted bytes, cache hits/misses, seconds).
-- Old `undo_journal.json`, `activity.log` and QSettings rules are imported once on first start and left untouched on disk.
-- Theme, language, font, window geometry and paths still live in `QSettings`.
+## มีอะไรใหม่ใน 4.3
+- **ที่เก็บข้อมูลแบบ SQLite** (`db.py`, ไฟล์ `~/.smart_file_manager_pro/sfm.db`, ใช้ `sqlite3` ของไลบรารีมาตรฐาน ไม่ต้องติดตั้งเพิ่ม) มาแทนที่ไฟล์ JSON ของ undo, ล็อกข้อความกิจกรรม และกฎที่เคยเก็บใน QSettings:
+  - `undo_batches` + `undo_moves` (ความสัมพันธ์ 1 ต่อหลาย, `ON DELETE CASCADE`): ประวัติ undo คงอยู่หลังรีสตาร์ต และรายการที่ undo แล้วจะถูกเก็บเป็นประวัติ (`status`)
+  - `activity_log`: ค้นหาได้ (มีช่องกรองใหม่ในหน้า Activity Log) และตัดรายการเก่าอัตโนมัติ
+  - `rules`: กฎจัดระเบียบแบบกำหนดเองที่เรียงลำดับได้
+  - `hash_cache`: Duplicate Finder นำค่า SHA-256 กลับมาใช้ เมื่อขนาด + เวลาแก้ไขของไฟล์ไม่เปลี่ยน ทำให้สแกนซ้ำเร็วขึ้นมาก
+  - `scan_history`: บันทึกการสแกนไฟล์ซ้ำทุกครั้ง (จำนวนไฟล์, กลุ่ม, ไบต์ที่สูญเปล่า, cache hit/miss, เวลาที่ใช้)
+- ไฟล์เดิม `undo_journal.json`, `activity.log` และกฎใน QSettings จะถูกนำเข้าครั้งเดียวเมื่อเริ่มใช้งานครั้งแรก และไม่ถูกแตะต้องบนดิสก์
+- ธีม ภาษา ฟอนต์ ตำแหน่งหน้าต่าง และพาธ ยังเก็บใน `QSettings` เหมือนเดิม
 
-## What's new in 4.2
-- **UI redesign** (matches the new light-violet mock-ups): slim icon sidebar with the SF logo, the seven main tools, a **⋯** tile for the other pages (Similar Photos, File Search, Processes, Network, System, Activity Log) and Settings at the bottom; no top/bottom bars.
-- **Dashboard**: greeting, a *file tidiness* score ring (0-100, see `core.tidy_score`) and up to three suggestions computed from a quick read-only look at your organizer folder, plus free space / CPU / undo-count cards. The search pill opens Ctrl+K (it can also search files).
-- **File Organizer** previews by itself (no Scan button): mode chips, folders-to-create bars, ticked file list, auto-organize checkbox, `Organize N files`.
-- **Disk Analyzer, Duplicate Finder, Cleanup, Bulk Renamer, Settings** rebuilt as card layouts. Scan options that the design has no room for (duplicate min size; cleanup folder/size/age) are under a small **Options…** link; the 100 largest files open from the footer link.
-- Settings has the theme chips, font and size, language and refresh rate again.
+## มีอะไรใหม่ใน 4.2
+- **ออกแบบ UI ใหม่** (ตรงกับ mockup โทนม่วงอ่อนใหม่): แถบด้านข้างแบบไอคอนบางๆ พร้อมโลโก้ SF, เครื่องมือหลักเจ็ดอย่าง, ปุ่ม **⋯** สำหรับหน้าอื่น (Similar Photos, File Search, Processes, Network, System, Activity Log) และ Settings ที่ด้านล่าง ไม่มีแถบบน/ล่าง
+- **Dashboard**: คำทักทาย, วงแหวนคะแนน *ความเป็นระเบียบของไฟล์* (0-100 ดู `core.tidy_score`) และคำแนะนำสูงสุดสามข้อที่คำนวณจากการอ่านโฟลเดอร์จัดระเบียบของคุณแบบเร็วและอ่านอย่างเดียว พร้อมการ์ดพื้นที่ว่าง / CPU / จำนวน undo ช่องค้นหาจะเปิด Ctrl+K (ค้นหาไฟล์ได้ด้วย)
+- **File Organizer** แสดงตัวอย่างเอง (ไม่มีปุ่ม Scan): มีชิปเลือกโหมด, แถบโฟลเดอร์ที่จะสร้าง, รายการไฟล์ที่ติ๊กไว้, ช่อง auto-organize และปุ่ม `Organize N files`
+- **Disk Analyzer, Duplicate Finder, Cleanup, Bulk Renamer, Settings** สร้างใหม่เป็นเลย์เอาต์แบบการ์ด ตัวเลือกสแกนที่ดีไซน์ไม่มีที่ว่าง (ขนาดขั้นต่ำของไฟล์ซ้ำ; โฟลเดอร์/ขนาด/อายุของ cleanup) อยู่ใต้ลิงก์เล็กๆ **Options…** และไฟล์ใหญ่สุด 100 อันดับเปิดได้จากลิงก์ท้ายหน้า
+- Settings กลับมามีชิปธีม ฟอนต์และขนาด ภาษา และอัตรารีเฟรชอีกครั้ง
 
-## What's new in 4.0
-- **Cleanup** page: temp files, large files unused for N days, empty folders → Recycle Bin. Large unused files are never pre-ticked.
-- **Similar Photos** page: perceptual matching (3 hashes) of burst shots / resized / re-saved copies, with thumbnails; keeps the biggest copy; move to `_Similar` (undoable) or Recycle Bin.
-- **Photos by date taken** organizer mode (EXIF date, falls back to file date).
-- **Crash reports**: unexpected errors are written to `~/.smart_file_manager_pro/crash.log` and a dialog shows where it is.
-- **CI** (`.github/workflows/ci.yml`): tests on Linux + **Windows**, `--selftest` startup check, and a Windows `.exe` build that is smoke-tested and uploaded as an artifact.
-- Sidebar scrolls when the window is short or the font is large.
+## มีอะไรใหม่ใน 4.0
+- หน้า **Cleanup**: ไฟล์ชั่วคราว, ไฟล์ใหญ่ที่ไม่ได้ใช้ N วัน, โฟลเดอร์ว่าง → ส่งไปถังรีไซเคิล ไฟล์ใหญ่ที่ไม่ได้ใช้จะไม่ถูกติ๊กเลือกไว้ล่วงหน้า
+- หน้า **Similar Photos**: จับคู่แบบ perceptual (hash 3 แบบ) สำหรับภาพถ่ายต่อเนื่อง / ภาพที่ย่อขนาด / ภาพที่บันทึกซ้ำ พร้อมภาพย่อ เก็บสำเนาที่ใหญ่สุดไว้ ย้ายไป `_Similar` (undo ได้) หรือส่งไปถังรีไซเคิล
+- โหมดจัดระเบียบ **รูปภาพตามวันที่ถ่าย** (วันที่ EXIF หากไม่มีใช้วันที่ไฟล์)
+- **รายงานข้อผิดพลาด**: ข้อผิดพลาดที่ไม่คาดคิดจะถูกเขียนลง `~/.smart_file_manager_pro/crash.log` และมีกล่องข้อความบอกตำแหน่งไฟล์
+- **CI** (`.github/workflows/ci.yml`): รันเทสต์บน Linux + **Windows**, ตรวจสอบการเริ่มต้นด้วย `--selftest` และสร้าง `.exe` บน Windows พร้อม smoke test แล้วอัปโหลดเป็น artifact
+- แถบด้านข้างเลื่อนได้เมื่อหน้าต่างเตี้ยหรือฟอนต์ใหญ่
 
-## What's new in 3.2
-- **UI polish**: menu icons now sit in an aligned column, no stray sort arrows until you click a header, tidier Settings buttons, Thai defaults to Leelawadee UI at 11 pt, Thai uptime units.
+## มีอะไรใหม่ใน 3.2
+- **ปรับแต่ง UI**: ไอคอนเมนูเรียงเป็นคอลัมน์ตรงกัน, ไม่มีลูกศรเรียงลำดับค้างจนกว่าจะคลิกหัวคอลัมน์, ปุ่มใน Settings เป็นระเบียบขึ้น, ภาษาไทยใช้ Leelawadee UI ขนาด 11 pt เป็นค่าเริ่มต้น, หน่วย uptime เป็นภาษาไทย
 
-## What's new in 3.1
-- **Font settings** (Settings → Font): choose any installed font and size (8–20 pt); headings, big numbers and the sidebar scale with it. Default stack includes Thai-capable fallbacks (Leelawadee UI, Tahoma, Noto Sans Thai).
+## มีอะไรใหม่ใน 3.1
+- **ตั้งค่าฟอนต์** (Settings → Font): เลือกฟอนต์ที่ติดตั้งในเครื่องและขนาด (8–20 pt) หัวข้อ ตัวเลขใหญ่ และแถบด้านข้างจะปรับตาม ชุดฟอนต์เริ่มต้นมีตัวสำรองที่รองรับภาษาไทย (Leelawadee UI, Tahoma, Noto Sans Thai)
 
-## What's new in 3.0
-- **Safety**: system folders and drive roots are refused for moves/renames/backups; scans report how many unreadable files were skipped; the **Undo history is saved to disk** and survives restarts.
-- **Usability**: click any column header to sort (sizes/dates sort numerically); right-click rows → *Open file / Show in folder / Copy path* (programs and scripts are never launched from here).
-- **Custom rules** in the Organizer (`*.psd` → `Design`, `invoice` → `Money`, …), saved between sessions.
-- **Recycle Bin** option for duplicates (recoverable from the bin; the only action that is not undoable inside the app).
-- **Auto-organize (watch folder)** with system-tray icon: new files that stopped changing for 5 s are moved using your mode and rules; every batch is undoable.
-- **Thai interface**.
+## มีอะไรใหม่ใน 3.0
+- **ความปลอดภัย**: ปฏิเสธโฟลเดอร์ระบบและรากของไดรฟ์สำหรับการย้าย/เปลี่ยนชื่อ/สำรองข้อมูล, การสแกนรายงานจำนวนไฟล์ที่อ่านไม่ได้ซึ่งถูกข้าม, **ประวัติ Undo ถูกบันทึกลงดิสก์** และคงอยู่หลังรีสตาร์ต
+- **การใช้งาน**: คลิกหัวคอลัมน์ใดก็ได้เพื่อเรียงลำดับ (ขนาด/วันที่เรียงตามตัวเลข), คลิกขวาที่แถว → *Open file / Show in folder / Copy path* (โปรแกรมและสคริปต์จะไม่ถูกรันจากที่นี่)
+- **กฎกำหนดเอง** ใน Organizer (`*.psd` → `Design`, `invoice` → `Money`, …) บันทึกไว้ใช้ข้ามเซสชัน
+- ตัวเลือก **ถังรีไซเคิล** สำหรับไฟล์ซ้ำ (กู้คืนจากถังได้ เป็นการกระทำเดียวที่ undo ในแอปไม่ได้)
+- **จัดระเบียบอัตโนมัติ (watch folder)** พร้อมไอคอนใน system tray: ไฟล์ใหม่ที่ไม่เปลี่ยนแปลงนาน 5 วินาทีจะถูกย้ายตามโหมดและกฎของคุณ ทุกชุดการย้าย undo ได้
+- **หน้าจอภาษาไทย**
 
-## Features
-| Page | What it does |
+## ฟีเจอร์
+| หน้า | ทำอะไรได้ |
 |---|---|
-| Dashboard | Live CPU / RAM / network sparklines, system-drive gauge, overview, quick actions, recent activity |
-| File Organizer | By type, type + month, or month; custom rules; preview; untick files; auto-organize |
-| Disk Analyzer | 100 largest files, space-by-type and biggest-folder charts, CSV export |
-| Duplicate Finder | Size → partial hash → SHA-256; move to `_Duplicates` (oldest kept) or Recycle Bin |
-| Similar Photos | Perceptual matching with thumbnails; move to `_Similar` or Recycle Bin |
-| Cleanup | Temp files, big unused files, empty folders → Recycle Bin |
-| File Search | Name or wildcard (`*.pdf`), minimum size, CSV export |
-| Bulk Renamer | Find/replace, prefix/suffix, case, spaces, numbering; live preview; conflict detection |
-| Backup | One-way copy of new/changed files with preview; never deletes |
-| Processes | Read-only top processes |
-| Network Tools | Interfaces, ping + DNS, single-port TCP check |
-| System Info / Activity Log / Settings | language, refresh rate |
+| Dashboard | กราฟ sparkline CPU / RAM / เครือข่ายแบบสด, เกจไดรฟ์ระบบ, ภาพรวม, ทางลัด, กิจกรรมล่าสุด |
+| File Organizer | จัดตามประเภท, ประเภท + เดือน หรือเดือน; กฎกำหนดเอง; ดูตัวอย่าง; เอาติ๊กไฟล์ออกได้; จัดระเบียบอัตโนมัติ |
+| Disk Analyzer | ไฟล์ใหญ่สุด 100 อันดับ, แผนภูมิพื้นที่ตามประเภทและโฟลเดอร์ที่ใหญ่สุด, ส่งออก CSV |
+| Duplicate Finder | ขนาด → partial hash → SHA-256; ย้ายไป `_Duplicates` (เก็บไฟล์เก่าสุดไว้) หรือถังรีไซเคิล |
+| Similar Photos | จับคู่แบบ perceptual พร้อมภาพย่อ; ย้ายไป `_Similar` หรือถังรีไซเคิล |
+| Cleanup | ไฟล์ชั่วคราว, ไฟล์ใหญ่ที่ไม่ได้ใช้, โฟลเดอร์ว่าง → ถังรีไซเคิล |
+| File Search | ค้นด้วยชื่อหรือ wildcard (`*.pdf`), ขนาดขั้นต่ำ, ส่งออก CSV |
+| Bulk Renamer | ค้นหา/แทนที่, คำนำหน้า/ต่อท้าย, ตัวพิมพ์, ช่องว่าง, ใส่เลขลำดับ; ดูตัวอย่างสด; ตรวจจับชื่อชนกัน |
+| Backup | คัดลอกทางเดียวเฉพาะไฟล์ใหม่/ที่เปลี่ยน พร้อมตัวอย่าง; ไม่ลบอะไรเลย |
+| Processes | ดูโปรเซสอันดับต้นๆ (อ่านอย่างเดียว) |
+| Network Tools | อินเทอร์เฟซ, ping + DNS, ตรวจพอร์ต TCP ทีละพอร์ต |
+| System Info / Activity Log / Settings | ภาษา, อัตรารีเฟรช |
 
-Shortcuts: **Ctrl+K** quick switcher, **Ctrl+1…9** pages. Drag a folder onto any path box.
+ทางลัด: **Ctrl+K** ตัวสลับด่วน, **Ctrl+1…9** สลับหน้า ลากโฟลเดอร์มาวางที่ช่องพาธใดก็ได้
 
-## Run
+## วิธีรัน
 ```powershell
 .\run.bat
 ```
-or:
+หรือ:
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -73,34 +73,34 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Build a standalone .exe
+## สร้างไฟล์ .exe แบบสแตนด์อโลน
 ```powershell
 .\build_exe.bat
 ```
-Output: `dist\SmartFileManagerPro.exe` (unsigned, so Windows SmartScreen may warn).
+ผลลัพธ์: `dist\SmartFileManagerPro.exe` (ไม่มีลายเซ็น Windows SmartScreen จึงอาจแจ้งเตือน)
 
-## Tests
+## การทดสอบ
 ```bash
-python -m unittest discover -s tests -v     # core + headless UI + i18n coverage (43 tests)
+python -m unittest discover -s tests -v     # core + UI แบบ headless + ความครบถ้วนของ i18n (43 เทสต์)
 ```
 
-## Layout
+## โครงสร้างไฟล์
 ```
-app.py       UI                    core.py      all file/network logic (Qt-free, unit-tested)
-widgets.py   charts, toast, items  themes.py    color themes + stylesheet
-crash.py     crash-report handler  .github/     CI workflow (Linux + Windows, exe build)
-i18n.py / i18n_th.py  translation  tests/       core, UI and i18n tests
+app.py       UI                    core.py      ลอจิกไฟล์/เครือข่ายทั้งหมด (ไม่พึ่ง Qt, มี unit test)
+widgets.py   แผนภูมิ, toast, item  themes.py    ธีมสีและ stylesheet
+crash.py     ตัวจัดการรายงานข้อผิดพลาด  .github/  workflow ของ CI (Linux + Windows, สร้าง exe)
+i18n.py / i18n_th.py  การแปลภาษา    tests/       เทสต์ของ core, UI และ i18n
 ```
 
-## Safety
-- Nothing moves until you confirm; the only deleting action is the optional *Recycle checked…* button (to the OS Recycle Bin).
-- Existing files are never overwritten (`file (1).pdf` is used on conflict).
-- Unfinished downloads, hidden files and symlinks are skipped.
-- Undo covers the last 20 move/rename batches, including after a restart (entries whose files are gone are dropped).
-- Auto-organize is off by default and asks for confirmation when enabled.
+## ความปลอดภัย
+- ไม่มีอะไรถูกย้ายจนกว่าคุณจะยืนยัน การลบเพียงอย่างเดียวคือปุ่มเสริม *Recycle checked…* (ส่งไปถังรีไซเคิลของระบบปฏิบัติการ)
+- ไม่เขียนทับไฟล์เดิม (ใช้ชื่อ `file (1).pdf` เมื่อชื่อชนกัน)
+- ข้ามไฟล์ดาวน์โหลดที่ยังไม่เสร็จ ไฟล์ซ่อน และ symlink
+- Undo ครอบคลุมการย้าย/เปลี่ยนชื่อ 20 ชุดล่าสุด รวมถึงหลังรีสตาร์ต (รายการที่ไฟล์หายไปแล้วจะถูกตัดออก)
+- Auto-organize ปิดไว้เป็นค่าเริ่มต้น และจะขอการยืนยันเมื่อเปิดใช้
 
-## Known limits
-- Developed and tested headless on Linux. The included GitHub Actions workflow runs the same tests and a startup check on Windows — push to GitHub to get that verification.
-- Not handled yet: Windows paths over 260 characters, files locked by other programs (they are reported as errors, not forced).
-- Activity-log lines and OS-provided ping output stay in English.
-- Undo does not cover Recycle Bin actions or Backup copies.
+## ข้อจำกัดที่ทราบ
+- พัฒนาและทดสอบแบบ headless บน Linux ส่วน GitHub Actions workflow ที่แนบมาจะรันเทสต์ชุดเดียวกันและตรวจการเริ่มต้นบน Windows — push ขึ้น GitHub เพื่อให้ได้การยืนยันนั้น
+- ยังไม่รองรับ: พาธ Windows ที่ยาวเกิน 260 ตัวอักษร และไฟล์ที่ถูกโปรแกรมอื่นล็อก (จะรายงานเป็นข้อผิดพลาด ไม่บังคับดำเนินการ)
+- บรรทัดในล็อกกิจกรรมและผลลัพธ์ ping จากระบบปฏิบัติการยังเป็นภาษาอังกฤษ
+- Undo ไม่ครอบคลุมการส่งไปถังรีไซเคิลและการคัดลอกของ Backup
